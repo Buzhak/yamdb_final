@@ -1,4 +1,4 @@
-(https://github.com/buzhak/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+!(https://github.com/buzhak/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 # Проект YaMDb
 
