@@ -60,19 +60,19 @@ docker-compose up -d --build
 Для выпонения миграций в базе данных выполняем команду:
 
 ```
-docker-compose exec web python manage.py migrate
+sudo docker-compose exec web python manage.py migrate
 ```
 
 Создаём суперпользователя командой:
 
 ```
-docker-compose exec web python manage.py createsuperuser
+sudo docker-compose exec web python manage.py createsuperuser
 ```
 
 Собираем статику в django:
 
 ```
-docker-compose exec web python manage.py collectstatic --no-input  
+sudo docker-compose exec web python manage.py collectstatic --no-input  
 ```
 
 Для загрузки тестовых данных из csv-файлов выполнить команду:
