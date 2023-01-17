@@ -2,9 +2,7 @@ from csv import DictReader
 
 from django.conf import settings
 from django.core.management import BaseCommand
-
-from reviews.models import (Category, Comment, Genre, GenreTitle, Review,
-                            Title)
+from reviews.models import Category, Comment, Genre, GenreTitle, Review, Title
 from users.models import User
 
 DATA_PATH = '/static/data/'

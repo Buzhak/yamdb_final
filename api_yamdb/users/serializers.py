@@ -1,8 +1,8 @@
-from rest_framework import serializers
-from django.shortcuts import get_object_or_404
-
 from core.constants import CODE_LENGTH
-from .models import User, Code
+from django.shortcuts import get_object_or_404
+from rest_framework import serializers
+
+from .models import Code, User
 
 
 class UserSerializer(serializers.ModelSerializer):

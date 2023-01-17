@@ -1,7 +1,6 @@
+from api.permissions import IsAdmin, IsAuthor, IsModerator, ReadOnly
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.viewsets import ModelViewSet
-
-from api.permissions import IsAdmin, IsModerator, IsAuthor, ReadOnly
 
 
 class DefaultPaginationViewSet(ModelViewSet):

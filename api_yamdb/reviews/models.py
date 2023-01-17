@@ -1,8 +1,7 @@
-from django.core.validators import MinValueValidator, MaxValueValidator
-from django.db import models
-
+from core.constants import MAX_SCORE, MIN_SCORE
 from core.models import TextModel
-from core.constants import MIN_SCORE, MAX_SCORE
+from django.core.validators import MaxValueValidator, MinValueValidator
+from django.db import models
 
 
 class Category(models.Model):

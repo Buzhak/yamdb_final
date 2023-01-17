@@ -1,8 +1,7 @@
-from rest_framework import serializers
-from rest_framework.validators import ValidationError
-
 from core.constants import MAX_SCORE, MIN_SCORE
 from core.serializers import AuthorSerializer
+from rest_framework import serializers
+from rest_framework.validators import ValidationError
 from reviews.models import Category, Comment, Genre, Review, Title
 
 

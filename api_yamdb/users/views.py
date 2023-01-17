@@ -1,9 +1,9 @@
-from rest_framework.decorators import action
-from rest_framework import viewsets, permissions
-from rest_framework.response import Response
-from django.shortcuts import get_object_or_404
-
 from api.permissions import IsAdmin
+from django.shortcuts import get_object_or_404
+from rest_framework import permissions, viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
+
 from .models import User
 from .serializers import AdvancedAdminSerializer, AdvancedUserSerializer
 

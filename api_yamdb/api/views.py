@@ -1,3 +1,6 @@
+from core.constants import CODE_LENGTH
+from core.views import (AdminModeratorAuthorOrReadOnlyViewSet,
+                        DefaultPaginationViewSet)
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
@@ -5,22 +8,17 @@ from rest_framework import filters, permissions, status, viewsets
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
-
-from core.constants import CODE_LENGTH
-from core.views import (DefaultPaginationViewSet,
-                        AdminModeratorAuthorOrReadOnlyViewSet)
 from reviews.models import Category, Genre, Review, Title
-from users.models import User, Code
+from users.models import Code, User
 from users.serializers import UserCodeSerializer, UserSerializer
-from .core import get_code, send_email, get_tokens_for_user
+
+from .core import get_code, get_tokens_for_user, send_email
 from .filters import TitleFilter
 from .mixins import CreateDestroyListViewSet
 from .permissions import IsAdmin, ReadOnly
 from .serializers import (CategorySerializer, CommentSerializer,
                           GenreSerializer, ReviewSerializer,
-                          TitleCreateSerializer, TitleListSerializer,
-                          )
+                          TitleCreateSerializer, TitleListSerializer)
 
 
 class CategoryViewSet(CreateDestroyListViewSet):
@@ -92,7 +90,7 @@ class CommentViewSet(DefaultPaginationViewSet,
         )
 
 
-class Sign_up(APIView):
+class SignUp(APIView):
     permission_classes = [permissions.AllowAny]
 
     def post(self, request):

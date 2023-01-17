@@ -1,11 +1,9 @@
 import random
 import string
 
-from rest_framework_simplejwt.tokens import AccessToken
-from django.core.mail import send_mail as django_send_mail
-
 from django.conf import settings
-
+from django.core.mail import send_mail as django_send_mail
+from rest_framework_simplejwt.tokens import AccessToken
 
 my_email = settings.YAMDB_EMAIL
 
@@ -15,8 +13,7 @@ def get_code(length: int) -> str:
     Функция генерирует строку символов длиной "length" символов.
     '''
     char_set = string.ascii_letters + string.digits
-    code = ''.join(random.sample(char_set, length))
-    return code
+    return ''.join(random.sample(char_set, length))
 
 
 def get_tokens_for_user(user):

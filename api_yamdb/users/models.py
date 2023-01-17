@@ -1,10 +1,8 @@
+from core.constants import CODE_LENGTH
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-from core.constants import CODE_LENGTH
-
-from .validators import validate_user_name, validate_symbols
-
+from .validators import validate_symbols, validate_user_name
 
 ADMIN = 'admin'
 MODERATOR = 'moderator'
