@@ -60,7 +60,7 @@ docker-compose up -d --build
 Для выпонения миграций в базе данных выполняем команду:
 
 ```
-docker-compose exec web python manage.py migrate
+sudo docker-compose exec web python manage.py migrate
 ```
 
 Создаём суперпользователя командой:
