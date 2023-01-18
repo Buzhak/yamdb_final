@@ -1,5 +1,7 @@
 ![workflow status](https://github.com/buzhak/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+Тестовый проект доступен по адресу http://51.250.99.167/
+
 # Проект YaMDb
 
 Проект YaMDb собирает отзывы пользователей на произведения. Сами произведения в YaMDb не хранятся, здесь нельзя посмотреть фильм или послушать музыку.
